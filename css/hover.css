@@ -1,0 +1,127 @@
+.main {
+    background-color: transparent;
+    position: relative;
+  }
+  .main::after,
+  .main::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    right: 0;
+    top: 100%;
+    bottom: 50%;
+    position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .main::after {
+    will-change: transform;
+    width: 100%;
+    background:white;
+  }
+  .main:hover::after {
+    -webkit-animation-name: line;
+    animation-name: line;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  @keyframes line {
+    0% {
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+    50% {
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+    50.0001% {
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+    to {
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  .effect-2 a{
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px 30px;
+  }
+  span{
+    display: block;
+    padding: 0 0.4rem;
+  }
+  .effect-2 a::before, .effect-2 a::after{
+    content:"";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+  }
+  
+  span::before, span::after{
+    content:"";
+    width:2px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+  }
+  .effect-2 a:hover::before, .effect-2 a:hover::after{
+    width: 100%;
+  }
+  .effect-2 a:hover span::before, .effect-2 a:hover span::after{
+    height: 100%;
+  }
+  .btn-4::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+  }
+  .btn-4 span::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+  }
+  .btn-4::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+  }
+  .btn-4 span::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+  }
+
+  /* Slider Hover Effect */
+  .pulse:hover, 
+.pulse:focus {
+  box-shadow: 0 0 2em black;
+}
+
+
+  
+  
+  
